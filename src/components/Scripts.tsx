@@ -1,9 +1,9 @@
-'use client'
-const Scripts = ({link}: any) => {
+import Scripts from 'next/script'
+const Script = ({link}: any) => {
     return (
         <>
-            <script id="repairdeskwidget" src={link}/>
+            <Scripts id="repairdeskwidget" src={link} defer={true}/>
         </>
     )
 }
-export default Scripts;
+export default Script;
