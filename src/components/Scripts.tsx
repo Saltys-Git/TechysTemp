@@ -1,9 +1,8 @@
-import Scripts from 'next/script'
-const Script = ({link}: any) => {
+const Scripts = ({link}: any) => {
     return (
         <>
-            <Scripts id="repairdeskwidget" src={link} defer={true}/>
+            <script id="repairdeskwidget" src={link}/>
         </>
     )
 }
-export default Script;
+export default Scripts;
