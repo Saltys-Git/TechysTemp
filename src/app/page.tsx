@@ -1,5 +1,8 @@
 import Image from 'next/image'
 import logo from '../../public/logo.png'
+import Scripts from "@/components/Scripts";
+import {Suspense} from "react";
+import loadingbar from "../components/loading";
 
 export default function Home() {
     const link = 'https://techys.repairdesk.co/widgets/repair_widget.js?token=' + process.env.TOKEN+'&width=100%&scrolling=no';
@@ -17,7 +20,7 @@ export default function Home() {
               </div>
 
           </div>
-          <script id="repairdeskwidget" src={link}></script>
+            <Scripts link={link}/>
       </>
   )
 }
